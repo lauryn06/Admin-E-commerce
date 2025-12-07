@@ -1,9 +1,174 @@
-:root{
---navBar: #03CFE8;
---icons:  #00E5FF;
+/* :root{
+--navBar: #1E90FF;
+--icons:  #000080;
 --icons2:  #F06A00;
 --letters:#333333;
 --lines: #000000;
 --background: #FFFFFF;
 
+}
+*{
+    padding: 0;
+    margin : 0;
+    box-sizing: border-box;
+}
+.creditials{
+    display: flex;
+    flex-direction: column;
+}
+.logbody{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--icons);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logPage{
+    width: 15rem;
+    background-color: var(--background);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+ :root {
+  --primary: #000080;
+  --navBar: #1E90FF;
+  --text-dark: #333333;
+  --text-light: #FFFFFF;
+  --accent: #F06A00;
+  --warning: #FFD700;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.logbody {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-main);
+  background-size: 2rem 2rem;
+}
+
+.logPage {
+  width: 25rem;
+  background-color: var(--text-light);
+  border-radius: 0.625rem;
+  box-shadow: 0 0 1rem var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+.header{
+background-color: var(--navBar);
+color: var(--text-light);
+}
+
+.header p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: bold;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  color: var(--text-light);
+}
+
+.body h1 {
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+.body p {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.creditials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.creditials label {
+  font-size: 0.9rem;
+  text-align: left;
+  color: var(--text-dark);
+}
+
+.creditials input {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border: 1px solid var(--text-dark);
+  border-radius: 0.375rem;
+}
+
+button.AdminLogin {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--primary);
+  color: var(--text-light);
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+button.AdminLogin i {
+  font-size: 1rem;
+}
+
+.body b {
+  color: var(--accent);
+}
+
+.body p:last-of-type {
+  background-color: var(--warning);
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+.foot a {
+  font-size: 0.9rem;
+  color: var(--primary);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+  .logPage {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .header h1,
+  .body h1 {
+    font-size: 1.2rem;
+  }
+
+  button.AdminLogin {
+    font-size: 0.9rem;
+  }
 }
