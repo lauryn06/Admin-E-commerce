@@ -1,4 +1,4 @@
-
+/* 
  :root {
   --primary: #000080;
   --navBar: #1E90FF;
@@ -51,7 +51,6 @@ border-top-left-radius: 0.625rem;
 border-top-right-radius:0.625rem;
 }
 .secure{
-  margin-left: 11rem;
   border-radius: 1rem;
   width: 7rem;
   height: 2rem;
@@ -59,7 +58,9 @@ border-top-right-radius:0.625rem;
 .header p{
   color: var(--text-light);
   font-size: small;
-  text-align: center;
+}
+.ad, .secure{
+text-align: center;
 }
 .header h1 {
   font-size: 1.5rem;
@@ -139,7 +140,7 @@ button.AdminLogin i {
   text-decoration: none;
   display: inline-block;
   margin-top: 1rem;
-  padding-left: 7rem;
+  padding-left: 6rem;
 }
 
 @media screen and (max-width: 480px) {
@@ -156,4 +157,271 @@ button.AdminLogin i {
   button.AdminLogin {
     font-size: 0.9rem;
   }
+} */
+ :root {
+  --primary: #000080;
+  --navBar: #1E90FF;
+  --text-dark: #333333;
+  --text-light: #FFFFFF;
+  --accent: #F06A00;
+  --warning: #FFD700;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.logbody {
+  min-height: 100vh;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-main);
+}
+
+/* Main Card */
+.logPage {
+  width: 100%;
+  max-width: 25rem;
+  background-color: var(--text-light);
+  border-radius: 0.625rem;
+  box-shadow: 0 0 1rem var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+
+/* Sections */
+.body, 
+.creditials, 
+.foot {
+  padding: 1.2rem;
+}
+
+/* Header */
+.header {
+  background-color: var(--navBar);
+  color: var(--text-light);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.fa-lock {
+  color: var(--warning);
+}
+
+.secure {
+  border-radius: 1rem;
+  width: 7rem;
+  height: 2rem;
+  margin: 0 auto 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header p {
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+/* Body Section */
+.back {
+  text-align: center;
+}
+
+.body h1 {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.body p {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Form */
+.creditials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.creditials label {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.creditials input {
+  padding: 0.6rem;
+  font-size: 0.95rem;
+  border: 1px solid var(--text-dark);
+  border-radius: 0.4rem;
+}
+
+/* Button */
+button.AdminLogin {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: var(--navBar);
+  color: var(--text-light);
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Accent Text */
+.body b {
+  color: var(--accent);
+}
+
+.body p:last-of-type {
+  background-color: var(--warning);
+  padding: 0.6rem;
+  border-radius: 0.375rem;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Footer */
+.foot {
+  text-align: center;
+}
+
+.foot a {
+  font-size: 0.9rem;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  body.logbody {
+    padding: 1rem;
+  }
+
+  .logPage {
+    max-width: 100%;
+  }
+
+  .header h1 {
+    font-size: 1.3rem;
+  }
+
+  .body h1 {
+    font-size: 1.1rem;
+  }
+
+  button.AdminLogin {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+body {
+  background: #ffffff; /* No background for content area */
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #0f1d33;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.logo {
+  color: #f59e0b;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #cbd5f5;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.menu a:hover {
+  background-color: #1e3358;
+}
+
+.menu a.active {
+  background-color: #1e3358;
+  border-left: 4px solid #f59e0b;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 25px;
+  background: none; /* No background on content area */
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-box button {
+  padding: 6px 12px;
+  border: 1px solid #2563eb;
+  background: #ffffff;
+  color: #2563eb;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.user-box button:hover {
+  background: #2563eb;
+  color: #ffffff;
 }
