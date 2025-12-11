@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial Management</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+  <div class="dashboard">
 
-<div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">Last Resorts</h2>
+      <p class="subtitle">Admin Dashboard</p>
 
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <h2 class="logo">Last Resorts</h2>
-    <p class="subtitle">Admin Dashboard</p>
+      <nav class="menu">
+        <a href="dashboard.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+        <a href="User-management.html"><i class="fa-solid fa-users"></i> User Management</a>
+        <a href="Products.html"><i class="fa-solid fa-box"></i> Products</a>
+        <a href="Product Upload.html"><i class="fa-solid fa-upload"></i> Products Upload</a>
+        <a href="Orders.html"><i class="fa-solid fa-cart-shopping"></i> Orders</a>
+        <a href="Course Enrollment.html"><i class="fa-solid fa-book"></i> Course Enrollment</a>
+        <a href="payment.html"><i class="fa-solid fa-credit-card"></i> Payment Verification</a>
+        <a href="tutorials.html" class="active"><i class="fa-solid fa-video"></i> Tutorials</a>
+      </nav>
+    </aside>
 
-    <nav class="menu">
-      <a href="dashboard.html">Dashboard</a>
-      <a href="User-management.html">User Management</a>
-      <a href="Products.html">Products</a>
-         <a href="Product Upload.html">Products Upload</a>
-      <a href="Orders.html">Orders</a>
-      <a href="Course Enrollment.html">Course Enrollment</a>
-      <a href="payment.html">Payment Verification</a>
-      <a href="tutorials.html">Tutorials</a>
-    </nav>
-  </aside>
-
-  <!-- Main Content (no background color) -->
-  <main class="main-content">
-    <div class="top-bar">
-      <h1>Tutorial Management</h1>
-      <div class="user-box">
-        <span>Welcome, Samson Zerubabbel Reissner</span>
-        <button>Logout</button>
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="top-bar">
+        <h1><i class="fa-solid fa-video"></i> Tutorial Management</h1>
+        <div class="user-box">
+          <span>Welcome, Samson Zerubabbel Reissner</span>
+          <button><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+        </div>
       </div>
-    </div>
-  </main>
 
-</div>
+      <section class="tutorial-section">
+        <h2>Manage Tutorials</h2>
+        <p>This section will display tutorials uploaded by students or admins.</p>
+      </section>
+    </main>
 
+  </div>
 </body>
 </html>

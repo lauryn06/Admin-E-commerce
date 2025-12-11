@@ -9,7 +9,11 @@
   --shadow: rgba(0, 0, 0, 0.1);
   --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.AdminLogin:hover {
+  background-color: #000080;
+  transition: background-color 0.3s ease;
 
+}
 * {
   margin: 0;
   padding: 0;
