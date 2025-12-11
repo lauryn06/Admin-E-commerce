@@ -1,5 +1,4 @@
-
- :root {
+:root {
   --primary: #000080;
   --navBar: #1E90FF;
   --text-dark: #333333;
@@ -9,11 +8,13 @@
   --shadow: rgba(0, 0, 0, 0.1);
   --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .AdminLogin:hover {
   background-color: #000080;
   transition: background-color 0.3s ease;
-
 }
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -99,6 +100,19 @@ body.logbody {
   line-height: 1.4;
 }
 
+.body b {
+  color: var(--accent);
+}
+
+.body p:last-of-type {
+  background-color: var(--warning);
+  padding: 0.6rem;
+  border-radius: 0.375rem;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
 /* Form */
 .creditials {
   display: flex;
@@ -134,20 +148,6 @@ button.AdminLogin {
   gap: 0.5rem;
 }
 
-/* Accent Text */
-.body b {
-  color: var(--accent);
-}
-
-.body p:last-of-type {
-  background-color: var(--warning);
-  padding: 0.6rem;
-  border-radius: 0.375rem;
-  font-size: 0.85rem;
-  margin-top: 1rem;
-  text-align: center;
-}
-
 /* Footer */
 .foot {
   text-align: center;
@@ -159,33 +159,12 @@ button.AdminLogin {
   text-decoration: none;
 }
 
-/* Responsive */
-@media screen and (max-width: 480px) {
-  body.logbody {
-    padding: 1rem;
-  }
-
-  .logPage {
-    max-width: 100%;
-  }
-
-  .header h1 {
-    font-size: 1.3rem;
-  }
-
-  .body h1 {
-    font-size: 1.1rem;
-  }
-
-  button.AdminLogin {
-    font-size: 0.95rem;
-  }
-}
-
-
+/* ===========================
+   Dashboard
+   =========================== */
 
 body {
-  background: #ffffff; /* No background for content area */
+  background: #ffffff;
 }
 
 .dashboard {
@@ -240,7 +219,7 @@ body {
 .main-content {
   flex: 1;
   padding: 25px;
-  background: none; /* No background on content area */
+  background: none;
 }
 
 .top-bar {
@@ -269,4 +248,92 @@ body {
 .user-box button:hover {
   background: #2563eb;
   color: #ffffff;
+}
+
+/* ===========================
+   MOBILE RESPONSIVENESS
+   =========================== */
+
+@media screen and (max-width: 768px) {
+
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    display: none;
+  }
+
+  .menu {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .menu a {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .user-box {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .sidebar {
+    padding: 10px;
+  }
+
+  .menu {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .menu a.active {
+    border-left: none;
+    border-bottom: 3px solid #f59e0b;
+  }
+
+  .main-content {
+    padding: 12px;
+  }
+
+  .creditials input {
+    font-size: 0.85rem;
+    padding: 0.55rem;
+  }
+
+  button.AdminLogin {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  .header h1 {
+    font-size: 1.2rem;
+  }
 }
