@@ -37,6 +37,32 @@
         <button>Logout</button>
       </div>
     </div>
+    <div class="table-container">
+                <table class="products-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-tag"></i> Product</th>
+                            <th><i class="fas fa-folder"></i> Category</th>
+                            <th><i class="fas fa-money-bill-wave"></i> Price</th>
+                            <th><i class="fas fa-cubes"></i> Stock</th>
+                            <th><i class="fas fa-toggle-on"></i> Status</th>
+                            <th><i class="fas fa-cog"></i> Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productsTableBody">
+                        <!-- Products will be added here dynamically -->
+                        <tr id="emptyRow">
+                            <td colspan="6">
+                                <div class="empty-state">
+                                    <i class="fas fa-box-open"></i>
+                                    <h3>No Products Added Yet</h3>
+                                    <p>Add your first product using the form above</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
   </main>
 
 </div>
