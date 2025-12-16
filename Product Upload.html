@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Admin Dashboard</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="products.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -36,6 +37,92 @@
         <button>Logout</button>
       </div>
     </div>
+    
+    <div class="content-wrapper">
+                <!-- Form Section -->
+                <section class="form-section">
+                    <div class="form-container">
+                        <form id="productForm" class="product-form">
+                            <div class="form-header">
+                                <h2><i class="fas fa-box-open"></i> Product Details</h2>
+                                <p>Fill in the details below to add a new product to the inventory</p>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="productName"><i class="fas fa-tag"></i> Product Name</label>
+                                <input type="text" id="productName" name="productName" placeholder="e.g. iPhone 15 Pro Max" required>
+                                <div class="hint">Enter the full product name as it should appear in the catalog</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="productCategory"><i class="fas fa-folder"></i> Category</label>
+                                <select id="productCategory" name="productCategory" required>
+                                    <option value="">Select a category</option>
+                                    <option value="Phones">Phones</option>
+                                    <option value="Laptops">Laptops</option>
+                                    <option value="Tablets">Tablets</option>
+                                    <option value="Accessories">Accessories</option>
+                                    <option value="Wearables">Wearables</option>
+                                </select>
+                                <div class="hint">Choose the most appropriate category for this product</div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="productPrice"><i class="fas fa-money-bill-wave"></i> Price (MWK)</label>
+                                    <input type="text" id="productPrice" name="productPrice" placeholder="e.g. 2,100,000" required>
+                                    <div class="hint">Enter the price in Malawian Kwacha (MWK)</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="productStock"><i class="fas fa-cubes"></i> Stock Quantity</label>
+                                    <input type="number" id="productStock" name="productStock" min="0" placeholder="e.g. 15" required>
+                                    <div class="hint">How many units are currently in stock?</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label><i class="fas fa-toggle-on"></i> Stock Status</label>
+                                <div class="radio-group">
+                                    <label class="radio-label active">
+                                        <input type="radio" name="stockStatus" value="Active" checked>
+                                        <span class="radio-custom"></span>
+                                        <span class="radio-text">Active</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="stockStatus" value="Inactive">
+                                        <span class="radio-custom"></span>
+                                        <span class="radio-text">Inactive</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="stockStatus" value="Out of Stock">
+                                        <span class="radio-custom"></span>
+                                        <span class="radio-text">Out of Stock</span>
+                                    </label>
+                                </div>
+                                <div class="hint">Set the product's availability status</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="productDescription"><i class="fas fa-align-left"></i> Product Description</label>
+                                <textarea id="productDescription" name="productDescription" placeholder="Enter a detailed product description..." rows="4"></textarea>
+                                <div class="hint">Provide additional details about the product (optional)</div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-plus-circle"></i> Add Product
+                                </button>
+                                <button type="reset" class="btn btn-secondary">
+                                    <i class="fas fa-redo"></i> Reset Form
+                                </button>
+                                <button type="button" class="btn btn-warning" id="previewBtn">
+                                    <i class="fas fa-eye"></i> Preview
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
   </main>
 
 </div>
