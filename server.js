@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/dashboard", (req, res) => {
-  res.sendFile(path.join(__dirname, "Dashboard.html"));
+  res.sendFile(path.join(__dirname, "dashboard.html"));
 });
 
 app.get("/users", (req, res) => {
