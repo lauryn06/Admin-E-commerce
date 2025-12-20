@@ -8,16 +8,36 @@
   --shadow: rgba(0, 0, 0, 0.1);
   --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.yellow{
+.orange{
   background-color: #F06A00;
-  color: #000000;
+  color: var(--text-light);
   border: none;
+  margin:2rem;
   padding: 0.5rem 1rem;
   border-radius: 0.4rem;
   cursor: pointer;
 }
+.tutorialactions{
+  display: flex;
+  gap: 1rem;
+ 
+}
+.tutorialedit, .tutorialdelete, .tutorialstat{
+  color: var(--text-light);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+th{
+  padding: 0.5rem;  
+  
+}
+table{
+  margin: 2rem 0;
+}
 .AdminLogin:hover {
-  background-color: #000080;
+  background-color: #F06A00;
   transition: background-color 0.3s ease;
 }
 
